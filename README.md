@@ -1,6 +1,6 @@
 # Frontend Mentor - Intro component with sign up form solution
 
-![](./screenshot.png)
+![](./screenshort.png)
 
 ### Links
 

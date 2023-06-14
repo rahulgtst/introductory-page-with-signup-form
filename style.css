@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main,
+article,
+aside,
+form,
+.form-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  height: 160vh;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  background: hsl(0, 100%, 74%) url(images/bg-intro-mobile.png) center no-repeat;
+  border: 1px solid wheat;
+}
+
+article > h1 {
+  font-size: 24px;
+  width: 280px;
+  padding: 20px 35px;
+}
+
+article > p {
+  font-size: 14px;
+  font-weight: 400;
+  width: 280px;
+  text-align: center;
+}
+
+aside {
+  margin-top: 40px;
+}
+
+aside > h2 {
+  font-size: 12px;
+  width: 280px;
+  padding: 15px 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 4px 12px;
+  background-color: hsl(248, 32%, 49%);
+}
+
+aside > h2 > span {
+  opacity: 0.75;
+  font-weight: 400;
+}
+
+form {
+  background-color: #fff;
+  width: 280px;
+  gap: 15px;
+  margin-top: 20px;
+  padding: 20px 0;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.form-control {
+  height: fit-content;
+  position: relative;
+  align-items: flex-end;
+  margin: 0;
+}
+
+.form-control.errors input {
+  border: 3px solid hsl(0, 100%, 74%);
+}
+
+.form-control span {
+  font-weight: 400;
+  margin-top: 1px;
+  color: hsl(0, 100%, 74%);
+  display: none;
+}
+
+.form-control img {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  display: none;
+}
+
+.form-control.errors img,
+.form-control.errors span {
+  display: block;
+}
+
+.form-control > input,
+form > button {
+  border-radius: 4px;
+}
+
+.form-control > input {
+  height: 40px;
+  width: 250px;
+  outline: none;
+  padding-left: 20px;
+  border: 1px solid hsl(246, 25%, 77%);
+  color: hsl(249, 10%, 26%);
+}
+
+.form-control > input:focus {
+  border: 2px solid black;
+}
+
+form > button {
+  background-color: hsl(154, 59%, 51%);
+  border: none;
+  outline: none;
+  color: #fff;
+  height: 40px;
+  width: 250px;
+}
+
+form > button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+form > p {
+  font-size: 11px;
+  text-align: center;
+  padding: 0 40px;
+  font-weight: 400;
+  color: hsl(246, 25%, 77%);
+}
+
+form > p > span {
+  color: hsl(0, 100%, 74%);
+}
+
+@media screen and (min-width: 720px) {
+  main {
+    height: 100vh;
+    flex-direction: row;
+    background-image: url(images/bg-intro-desktop.png);
+    gap: 80px;
+  }
+  article > h1 {
+    padding: 0;
+    width: 350px;
+    font-size: 32px;
+  }
+  article > p {
+    text-align: justify;
+    width: 350px;
+  }
+
+  aside > h2 {
+    font-size: 12px;
+    width: 420px;
+  }
+  aside > form {
+    padding: 30px 0;
+    width: 420px;
+  }
+  .form-control {
+    margin-bottom: 5px;
+  }
+
+  .form-control > input,
+  form > button {
+    width: 380px;
+    font-size: 12px;
+  }
+  .form-control > span {
+    font-size: 10px;
+  }
+
+  form > p {
+    padding: 0;
+  }
+}
